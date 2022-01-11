@@ -12,7 +12,7 @@ Retourne un json.
 Récupérer la liste des comptes utilisateurs :
 http://localhost/task/api/task.php?user
 Retourne un json.}
-*/
+
 
 // je crée la variable dans laquelle je stocke les bases de l'url de l'API
 const url = "http://localhost/task/api/task.php?task=1";
@@ -45,5 +45,26 @@ async function fetchApi(url) {
  
  }
  processData("http://localhost/task/api/task.php?user");
+
+ */
+
+
+ // Récupérer la liste des comptes utilisateurs :
+let listUser = document.getElementById("listUser");
+
+// Récupérer la liste des tâches :
+let listTask = document.getElementById("listTask");
+
+// Récupérer la liste des catégories :
+let listCat = document.getElementById("listCat");
+
+// Afficher les éléments
+const urlTask = "http://localhost/task/api/task.php?task=1";
+const urlCat = "http://localhost/task/api/task.php?cat";
+const urlUser = "http://localhost/task/api/task.php?user";
+
+function displayTask (url){
+    
+}
 
 
