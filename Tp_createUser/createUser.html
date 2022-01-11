@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    #error{
+    font-style: italic;
+    color: red;
+    }
+    </style>
+    <title>createUser</title>
+</head>
+
+<body>
+    <h2>Créer un utilisateur</h2>
+        <form>
+            <p> Saisir un nom :</p>
+            <p></p>
+            <input type="text" name="" id="name"><br>
+            <p> Saisir un prénom : </p>
+            <p></p>
+            <input type="text" name="" id="firstname"><br>
+            <p> Saisir un login : </p>
+            <p></p>
+            <input type="text" name="" id="login"><br>
+            <p> Saisir un mot de passe : </p>
+            <p></p>
+            <input type="text" name="" id="mdp"><br>
+            <p></p>
+            <input type="button" value="ajouter" onclick="ajouter()">
+        </form>
+
+    <h3 id ="error"></h3>
+    
+    <h2>Liste des comptes utilisateurs créés</h2>
+
+    <h3 id ="nbrCompte"></h3>
+
+    <p id = "resultat"></p>
+
+    <script type="text/javascript" src="createUser.js"></script>
+</body>
+
+</html>
