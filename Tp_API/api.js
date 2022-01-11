@@ -1,19 +1,4 @@
-// je crée des variables dans lesquelles je stocke les bases de l'url de l'API
-const url ="http://localhost/task/api/task.php?cat";
-
-async function fetchApi(url){
-
-    let response;
-    let data;
-
-    response = await fetch(url, {mode: "no-cors"});
-    data = await response.json();
-
-    return data;
-}
-console.log(fetchApi(url + "cat"));
-
-/*
+ /*
 Documentation de l’API :
 Récupérer la liste des tâches :
 http://localhost/task/api/task.php?task=1
@@ -26,4 +11,39 @@ http://localhost/task/api/task.php?cat
 Retourne un json.
 Récupérer la liste des comptes utilisateurs :
 http://localhost/task/api/task.php?user
-Retourne un json.}*/
+Retourne un json.}
+*/
+
+// je crée la variable dans laquelle je stocke les bases de l'url de l'API
+const url = "http://localhost/task/api/task.php?task=1";
+
+// Récupérer la liste des tâches :
+async function fetchApi(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+ 
+    return data;
+ }
+ 
+ async function processData(url) {
+    const data = await fetchApi(url);
+ 
+ }
+ processData("http://localhost/task/api/task.php?cat");
+
+
+ // Récupérer la liste des comptes utilisateurs :
+ async function fetchApi(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+ 
+    return data;
+ }
+ 
+ async function processData(url) {
+    const data = await fetchApi(url);
+ 
+ }
+ processData("http://localhost/task/api/task.php?user");
+
+
