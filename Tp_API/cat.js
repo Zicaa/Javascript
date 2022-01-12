@@ -48,14 +48,11 @@ async function fetchApi(url) {
 
  */
 
-//Afficher la liste des catégories
-//url api
+
 const url = 'https://adrardev.fr/task/api/task.php?cat';
 
-//zone pour afficher le contenu de l'api
 let zone = document.querySelector('#zone');
 
-//fonction récupération et affichage du json dans la page
 async function showCatApi(){
     const data =  await fetch(url);
     const json =  await data.json();
