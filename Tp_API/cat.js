@@ -48,23 +48,21 @@ async function fetchApi(url) {
 
  */
 
+//Afficher la liste des catégories
+//url api
+const url = 'https://adrardev.fr/task/api/task.php?cat';
 
- // Récupérer la liste des comptes utilisateurs :
-let listUser = document.getElementById("listUser");
+//zone pour afficher le contenu de l'api
+let zone = document.querySelector('#zone');
 
-// Récupérer la liste des tâches :
-let listTask = document.getElementById("listTask");
-
-// Récupérer la liste des catégories :
-let listCat = document.getElementById("listCat");
-
-// Afficher les éléments
-const urlTask = "http://localhost/task/api/task.php?task=1";
-const urlCat = "http://localhost/task/api/task.php?cat";
-const urlUser = "http://localhost/task/api/task.php?user";
-
-function displayTask (url){
-    
+//fonction récupération et affichage du json dans la page
+async function showCatApi(){
+    const data =  await fetch(url);
+    const json =  await data.json();
+    for(let i in json){
+        zone.innerHTML += "<p>id : " + json[i].id_cat + ", Name : " + json[i].name_cat + "</p>"; 
+    }
 }
+showCatApi();
 
 
